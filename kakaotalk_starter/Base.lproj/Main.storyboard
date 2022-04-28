@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kakao Chat Landing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="KakaoChatLandingViewController" customModule="kakaotalk_starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UUC-g2-r7V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KakaoChatTableViewCell" rowHeight="80" id="pm3-Ed-LhO" customClass="KakaoChatTableViewCell" customModule="kakaotalk_starter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pm3-Ed-LhO" id="02o-bq-H6N">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zJD-Cw-nSw">
+                                                    <rect key="frame" x="20" y="0.0" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="zJD-Cw-nSw" secondAttribute="height" multiplier="1:1" id="hKJ-SG-sU7"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-ik-dXP">
+                                                    <rect key="frame" x="108" y="51.5" width="286" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf9-qV-mwC">
+                                                    <rect key="frame" x="284" y="11" width="110" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyP-tD-aTJ">
+                                                    <rect key="frame" x="108" y="11" width="46.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mjx-ik-dXP" firstAttribute="top" secondItem="uyP-tD-aTJ" secondAttribute="bottom" constant="20" id="2Te-cp-aXa"/>
+                                                <constraint firstItem="uyP-tD-aTJ" firstAttribute="leading" secondItem="zJD-Cw-nSw" secondAttribute="trailing" constant="8" id="3Fi-T4-ZIp"/>
+                                                <constraint firstItem="jf9-qV-mwC" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="topMargin" id="Fca-Iw-709"/>
+                                                <constraint firstItem="jf9-qV-mwC" firstAttribute="trailing" secondItem="02o-bq-H6N" secondAttribute="trailingMargin" id="Gun-bi-yda"/>
+                                                <constraint firstItem="jf9-qV-mwC" firstAttribute="leading" secondItem="uyP-tD-aTJ" secondAttribute="trailing" constant="89.5" id="Gxq-SG-ofk"/>
+                                                <constraint firstItem="mjx-ik-dXP" firstAttribute="leading" secondItem="zJD-Cw-nSw" secondAttribute="trailing" constant="8" id="ShO-xb-as3"/>
+                                                <constraint firstItem="zJD-Cw-nSw" firstAttribute="leading" secondItem="02o-bq-H6N" secondAttribute="leading" constant="20" id="TpS-7h-TbL"/>
+                                                <constraint firstItem="uyP-tD-aTJ" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="topMargin" id="dc1-NI-ZMi"/>
+                                                <constraint firstItem="mjx-ik-dXP" firstAttribute="top" secondItem="uyP-tD-aTJ" secondAttribute="bottom" constant="20" id="dgq-dN-1GG"/>
+                                                <constraint firstAttribute="bottom" secondItem="zJD-Cw-nSw" secondAttribute="bottom" id="er1-kM-jZF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jf9-qV-mwC" secondAttribute="bottom" constant="40" id="h7m-Ug-Oh5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mjx-ik-dXP" secondAttribute="bottom" constant="0.5" id="qDq-Dd-tmT"/>
+                                                <constraint firstItem="zJD-Cw-nSw" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="top" id="rnt-bs-voc"/>
+                                                <constraint firstItem="mjx-ik-dXP" firstAttribute="trailing" secondItem="02o-bq-H6N" secondAttribute="trailingMargin" id="sgP-18-a3x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lastMessageLabel" destination="mjx-ik-dXP" id="Ig9-RZ-H8Y"/>
+                                            <outlet property="lastSentDateLAael" destination="jf9-qV-mwC" id="Gcg-Dz-A4G"/>
+                                            <outlet property="nameLabel" destination="uyP-tD-aTJ" id="nTu-Us-agA"/>
+                                            <outlet property="senderImageView" destination="zJD-Cw-nSw" id="epd-Jd-dAp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UUC-g2-r7V" secondAttribute="bottom" id="Qh1-UP-pjF"/>
+                            <constraint firstItem="UUC-g2-r7V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c65-rl-Sf8"/>
+                            <constraint firstItem="UUC-g2-r7V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nVg-DC-XL8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UUC-g2-r7V" secondAttribute="trailing" id="sVl-6Z-KtF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="UUC-g2-r7V" id="Wld-9k-qHy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="-34.151785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
